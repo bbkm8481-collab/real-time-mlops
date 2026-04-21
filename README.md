@@ -26,7 +26,7 @@ This system simulates a real-world financial security pipeline, utilizing a cont
 ## 📊 Live Telemetry & Load Testing
 The system is heavily instrumented to provide real-time observability into the streaming pipeline. Below is a simulated load test capturing a burst of API traffic successfully routed through the Kafka broker.
 
-*(Drag and drop your grafana-spike.png image here!)*
+<img width="784" height="517" alt="Screenshot 2026-04-21 at 11 15 03 PM" src="https://github.com/user-attachments/assets/79ba5e30-53d8-4417-9ac5-1db6eadc3237" />
 
 ## 🚀 How to Run the Cluster Locally
 
@@ -46,5 +46,3 @@ docker-compose up --build -d
 * **View the Live Dashboard (Grafana):** `http://localhost:3000`
 * **Watch the AI Logs:** `docker logs -f fraud-consumer`
 ```
-
-<img width="784" height="517" alt="Screenshot 2026-04-21 at 11 15 03 PM" src="https://github.com/user-attachments/assets/e2f99b42-af4d-4d0b-8cfb-161193f02396" />
