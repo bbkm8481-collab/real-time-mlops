@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s # Check for new metrics every 5 seconds
+
+scrape_configs:
+  - job_name: 'fraud_api'
+    static_configs:
+      - targets: ['fraud-api:8000']

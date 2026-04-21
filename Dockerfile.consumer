@@ -1,0 +1,19 @@
+# Use the same lightweight Python image
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y librdkafka-dev gcc
+
+# Install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the consumer code, model, and data
+COPY consumer/ ./consumer/
+COPY model/ ./model/
+COPY data/ ./data/
+
+# Start the background listener
+CMD ["python", "consumer/consumer.py"]
